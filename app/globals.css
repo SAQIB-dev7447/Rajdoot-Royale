@@ -245,3 +245,68 @@
   .hero-copy h1{font-size:clamp(44px,11.2vw,62px)}
   .hero-copy .gold-button{padding:13px 21px}
 }
+
+/* Homepage guest feedback display. The sample label keeps illustrative copy distinct from verified reviews. */
+.guest-feedback{display:block;padding-top:68px;padding-bottom:72px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.guest-feedback-heading{display:grid;grid-template-columns:1fr auto;align-items:end;margin-bottom:26px}
+.guest-feedback-heading .eyebrow{grid-column:1/-1;margin-bottom:12px}
+.guest-feedback-heading h2{font:400 clamp(38px,4.3vw,58px)/.98 'Cormorant Garamond',serif;letter-spacing:-.035em;margin:0}
+.guest-feedback-heading h2 em{color:#c6a172;font-weight:400}
+.guest-feedback-disclaimer{max-width:280px;margin:0 0 4px;color:#9f958d;font-size:9px;line-height:1.7;text-align:right}
+.guest-feedback-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.guest-quote{min-height:226px;padding:23px 25px 20px;background:#141214;border:1px solid rgba(226,207,180,.13);display:flex;flex-direction:column;align-items:flex-start}
+.guest-quote-label{color:#c6a77e;font-size:7px;letter-spacing:.2em}
+.guest-quote-mark{height:38px;color:#c6a172;font:62px/.95 'Cormorant Garamond',serif}
+.guest-quote blockquote{margin:1px 0 20px;color:#eee4da;font:400 21px/1.35 'Cormorant Garamond',serif}
+.guest-quote-source{margin-top:auto;color:#8e8580;font-size:7px;letter-spacing:.16em;text-transform:uppercase}
+.guest-feedback-form-wrap{max-width:900px;padding-bottom:88px}
+.guest-feedback-form{background:#141214;border:1px solid rgba(226,207,180,.13);padding:clamp(22px,4vw,42px)}
+.feedback-rating{border:0;padding:0;margin:0;min-width:0}
+.feedback-rating legend{color:#d7cabc;font-size:9px;letter-spacing:.06em;margin-bottom:10px}
+.feedback-rating-options{display:flex;gap:9px}
+.feedback-rating-options label{display:block;cursor:pointer}
+.feedback-rating-options input{position:absolute;width:1px;height:1px;opacity:0}
+.feedback-rating-options span{display:grid;place-items:center;width:37px;height:37px;border:1px solid rgba(226,207,180,.2);border-radius:50%;color:#d7cabc;transition:background .2s,border-color .2s,color .2s}
+.feedback-rating-options input:checked+span{background:#a87b49;border-color:#c39b6a;color:#fff8ed}
+.feedback-rating-options input:focus-visible+span{outline:2px solid #f3eee7;outline-offset:3px}
+.feedback-rating-scale{display:flex;justify-content:space-between;max-width:221px;margin-top:7px;color:#8e8580;font-size:8px}
+@media(min-width:761px) and (max-width:1150px){.nav-left{gap:clamp(10px,1.4vw,16px)}.nav-left a{font-size:9px;letter-spacing:.02em}}
+@media(max-width:760px){
+  .guest-feedback{padding-top:48px;padding-bottom:50px}
+  .guest-feedback-heading{grid-template-columns:1fr;gap:13px;margin-bottom:21px}
+  .guest-feedback-heading h2{font-size:42px}
+  .guest-feedback-disclaimer{text-align:left;max-width:320px}
+  .guest-feedback-list{grid-template-columns:1fr;gap:11px}
+  .guest-quote{min-height:0;padding:21px 21px 18px}
+  .guest-quote blockquote{font-size:20px;margin-bottom:17px}
+  .guest-feedback-form-wrap{padding-bottom:58px}
+}
+
+/* Shared smooth carousel behavior for accommodations and guest feedback. */
+.carousel-viewport{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;outline:none}
+.carousel-viewport::-webkit-scrollbar{display:none}
+.carousel-viewport:focus-visible{outline:1px solid #c6a172;outline-offset:4px}
+.carousel-track{display:flex;gap:17px;width:100%}
+.carousel-slide{flex:0 0 calc((100% - 34px)/3);min-width:0;scroll-snap-align:start}
+.carousel-controls{display:flex;justify-content:center;align-items:center;gap:17px;margin:20px 0 0}
+.carousel-controls>button{display:grid;place-items:center;border:1px solid var(--rule);background:transparent;border-radius:50%;width:34px;height:34px;cursor:pointer;color:#ccb18c;transition:background .2s,border-color .2s,opacity .2s}
+.carousel-controls>button:hover:not(:disabled){background:#a87b49;border-color:#c39b6a}
+.carousel-controls>button:disabled{opacity:.38;cursor:default}
+.carousel-position{display:flex;align-items:center;gap:9px;color:#cbb99f;font:14px 'Cormorant Garamond',serif;letter-spacing:.08em}
+.carousel-position i{display:block;width:28px;height:1px;background:#98764f}
+.accommodation-carousel .room-card{width:100%}
+.accommodation-carousel .room-image{height:clamp(220px,29vw,330px)}
+.accommodation-carousel .room-card:nth-child(n+2){display:block}
+.guest-feedback-add{grid-column:2;justify-self:end;margin-top:13px}
+.guest-feedback-carousel .carousel-slide{flex-basis:calc((100% - 34px)/3)}
+.guest-quote{height:100%;min-height:226px}
+.feedback-page-reviews{padding-bottom:86px}
+.feedback-page-reviews .section-heading{margin-bottom:25px}
+@media(max-width:760px){
+  .carousel-track{gap:12px}
+  .carousel-slide,.guest-feedback-carousel .carousel-slide{flex-basis:100%}
+  .accommodation-carousel .room-image{height:68vw;max-height:350px}
+  .guest-feedback-add{grid-column:1;justify-self:start;margin-top:0}
+  .feedback-page-reviews{padding-bottom:58px}
+}
+@media(prefers-reduced-motion:reduce){.carousel-viewport{scroll-behavior:auto}}
