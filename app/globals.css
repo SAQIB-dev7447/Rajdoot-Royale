@@ -225,3 +225,23 @@
   .home-manifesto>p:not(.eyebrow){font-size:9px;max-width:320px;}
   .desktop-break{display:none;}
 }
+
+/* Use the supplied landscape and portrait hotel photography at their intended breakpoints. */
+.hero-image{
+  background-image:linear-gradient(90deg,rgba(9,8,10,.62) 0%,rgba(13,11,13,.42) 28%,rgba(12,10,11,.1) 56%,rgba(11,9,10,.02) 100%),linear-gradient(0deg,rgba(9,8,10,.2),transparent 38%),url('/rajdoot-royale-hero-desktop.png');
+  background-position:center center;
+  background-size:cover;
+}
+.hero-copy{top:15%;width:min(520px,44vw)}
+.hero-copy h1{font-size:clamp(58px,5.8vw,78px)}
+.gold-button,.book-button{border-radius:999px}
+.hero-copy .gold-button{padding:14px 24px;white-space:nowrap}
+@media(max-width:760px){
+  .hero-image{
+    background-image:linear-gradient(90deg,rgba(9,8,10,.55),rgba(10,9,10,.28) 55%,rgba(10,9,10,.06)),linear-gradient(0deg,rgba(9,8,10,.24),transparent 50%),url('/rajdoot-royale-hero-mobile.png');
+    background-position:center center;
+  }
+  .hero-copy{top:17%;width:88vw}
+  .hero-copy h1{font-size:clamp(44px,11.2vw,62px)}
+  .hero-copy .gold-button{padding:13px 21px}
+}

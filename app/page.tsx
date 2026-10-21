@@ -15,7 +15,7 @@ export default function Home() {
   return <main>
     <section className="hero" id="home">
       <div className="hero-image" />
-      <div className="hero-copy"><p className="eyebrow">A PRIVATE WORLD OF DISTINCTION</p><h1>Welcome to<br />the epitome of<br /><em>luxury</em></h1><p className="intro">An exceptional stay, shaped by thoughtful details, timeless design and warm, attentive service.</p><Link className="gold-button" href="/rooms">Discover your stay <span>↗</span></Link></div>
+      <div className="hero-copy"><p className="eyebrow">A PRIVATE WORLD OF DISTINCTION</p><h1>Welcome to<br /><em>Rajdoot Royale</em></h1><p className="intro">An exceptional stay, shaped by thoughtful details, timeless design and warm, attentive service.</p><Link className="gold-button" href="/rooms">Discover your stay <span>↗</span></Link></div>
       <div className="hero-caption"><span>01</span><i /> AN EXPERIENCE ABOVE THE ORDINARY</div>
     </section>
 
